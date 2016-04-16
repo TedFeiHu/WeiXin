@@ -3,4 +3,11 @@
     <color name="back_ground">#2B2B2B</color>
     <color name="back_ground_pressed">#101010</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#23b223</color>
+    <color name="line">#9b9b9b</color>
+    <color name="problem">#34679A</color>
+    <color name="login_s_no">#EFEFEF</color>
+    <color name="white_pree">#C6C5C5</color>
+    <color name="green_pressed">#0A940A</color>
 </resources>
