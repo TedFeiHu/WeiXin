@@ -1,6 +1,7 @@
 package com.wuxinaedu.weixin.activity.core;
 
 import com.wuxinaedu.weixin.R;
+import com.wuxinaedu.weixin.utils.CoreUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -23,6 +24,8 @@ public abstract class BaseActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		
 		setContentView(getContentView());
+		
+		CoreUtil.addToActivityList(this);
 		
 		leftIv = (ImageView) findViewById(R.id.left_iv_id);
 		rightIv = (ImageView) findViewById(R.id.right_iv_id);
@@ -126,4 +129,9 @@ public abstract class BaseActivity extends Activity{
 		}
 	}
 	
+	@Override
+	public void finish() {
+		CoreUtil.removeActivity(this);
+		super.finish();
+	}
 }

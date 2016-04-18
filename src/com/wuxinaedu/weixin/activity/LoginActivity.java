@@ -7,7 +7,9 @@ import org.json.JSONObject;
 import com.wuxinaedu.weixin.R;
 import com.wuxinaedu.weixin.activity.core.BaseActivity;
 import com.wuxinaedu.weixin.bean.UserInfor;
+import com.wuxinaedu.weixin.utils.Constant;
 import com.wuxinaedu.weixin.utils.CoreUtil;
+import com.wuxinaedu.weixin.utils.FileLocalCache;
 import com.wuxinaedu.weixin.utils.GetJsonString;
 
 import android.content.Intent;
@@ -151,7 +153,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			return;
 		}
 		//先不做缓存
-		startActivity(new Intent(LoginActivity.this,MainActivity.class));
+		CoreUtil.startActivity(LoginActivity.this, MainActivity.class);
+		//2 请求成功 保存数据
+		FileLocalCache.setSerializableData(LoginActivity.this, userInfor, Constant.USER_INFOR);
 	}
 	
 	/**

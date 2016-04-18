@@ -1,15 +1,21 @@
 package com.wuxinaedu.weixin.activity;
 
 import com.wuxinaedu.weixin.R;
+import com.wuxinaedu.weixin.activity.core.BaseActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_base);
 	}
+
+	@Override
+	protected int getContentView() {
+		// TODO Auto-generated method stub
+		return R.layout.activity_main;
+	}
+	
 }
