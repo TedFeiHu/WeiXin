@@ -3,14 +3,17 @@ package com.wuxinaedu.weixin.activity.core;
 import com.wuxinaedu.weixin.R;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public abstract class BaseActivity extends Activity{
-	
+	//加载对话框
+	private ProgressDialog pd;
 	private ImageView leftIv,rightIv;
 	private TextView title, rightTv;
 	private OnClickListener onClickListener;
@@ -90,6 +93,37 @@ public abstract class BaseActivity extends Activity{
 		rightTv.setVisibility(View.VISIBLE);
 		rightTv.setText(resid);
 		rightTv.setOnClickListener(onClickListener);
+	}
+	
+	/**
+	 * 提示信息
+	 */
+	protected void toastMessage(Object message){
+		Toast.makeText(getApplicationContext(),message.toString(),Toast.LENGTH_SHORT).show();
+	}
+	
+	/**
+	 * 开启加载提示对话款
+	 */
+	public void showProDialog() {
+		if(pd == null ){
+			pd = new ProgressDialog(this);
+			pd.setMessage("加载中，请稍后...");
+			pd.setCancelable(false);
+		}
+		if(pd.isShowing()){
+//			pd.dismiss();	
+			return;
+		}
+		pd.show();
+	}
+	/**
+	 * 关闭加载提示对话款
+	 */
+	public void dismissProDialog() {
+		if(pd != null ){
+			pd.dismiss();	
+		}
 	}
 	
 }
