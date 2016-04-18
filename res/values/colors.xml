@@ -14,5 +14,8 @@
     <color name="green_pressed">#0A940A</color>
     <color name="line_11">#11000000</color>
     <color name="trans">#00000000</color>
+    
+    <color name="logout_nom">#FC5050</color>
+    <color name="logout_press">#D24141</color>
 
 </resources>

@@ -36,6 +36,8 @@ public abstract class BaseActivity extends FragmentActivity{
 			@Override
 			public void onClick(View v) {
 				if (onClickListener == null) { //默认的
+					//移除已关闭的activity
+        			CoreUtil.removeActivity(BaseActivity.this);
 					finish();
 				} else { //说明用户自定义了点击事件
 					onClickListener.onClick(v);
@@ -136,9 +138,4 @@ public abstract class BaseActivity extends FragmentActivity{
 		}
 	}
 	
-	@Override
-	public void finish() {
-		CoreUtil.removeActivity(this);
-		super.finish();
-	}
 }

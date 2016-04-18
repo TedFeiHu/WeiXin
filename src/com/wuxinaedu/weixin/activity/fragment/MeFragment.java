@@ -6,10 +6,12 @@ import org.xutils.image.ImageOptions;
 
 import com.wuxinaedu.weixin.R;
 import com.wuxinaedu.weixin.activity.MainActivity;
+import com.wuxinaedu.weixin.activity.SettingActivity;
 import com.wuxinaedu.weixin.bean.UserInfor;
 import com.wuxinaedu.weixin.utils.L;
 import com.wuxinaedu.weixin.widget.RoundImageView;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -44,8 +46,8 @@ public class MeFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				L.i("跳转设置界面");
-				// startActivity(new Intent(getActivity(),
-				// SettingActivity.class));
+				Intent intent = new Intent(getContext(),SettingActivity.class);
+				startActivity(intent);
 			}
 		});
 
