@@ -18,7 +18,6 @@ public class MeFragment extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		if(view == null){
-			L.i("-------------------------");
 			view = inflater.inflate(R.layout.fragment_me, null);
 			main = ((MainActivity)getActivity());
 		}

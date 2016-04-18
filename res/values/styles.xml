@@ -32,6 +32,39 @@
         <item name="android:gravity">center</item>
     </style>
     
+    <!-- me界面-->
+    <style name="rl_sty">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:background">@drawable/me_press_back</item>
+        <item name="android:clickable">true</item>
+    </style>
+    
+    <style name="im_sty">
+        <item name="android:layout_width">28dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    
+    <style name="tv_sty">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/trans</item>
+        <item name="android:paddingLeft">48dp</item>
+    </style>
+    
+    <style name="im_rigent_sty">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
     <!-- radiobutton 的样式 -->
     <style name="ra_style">
         <item name="android:layout_width">0dp</item>
