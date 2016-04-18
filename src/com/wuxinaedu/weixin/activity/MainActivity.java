@@ -11,6 +11,9 @@ import com.wuxinaedu.weixin.activity.fragment.ContactsFragment;
 import com.wuxinaedu.weixin.activity.fragment.FindFragment;
 import com.wuxinaedu.weixin.activity.fragment.MeFragment;
 import com.wuxinaedu.weixin.activity.fragment.WxFragment;
+import com.wuxinaedu.weixin.bean.UserInfor;
+import com.wuxinaedu.weixin.utils.Constant;
+import com.wuxinaedu.weixin.utils.FileLocalCache;
 import com.wuxinaedu.weixin.utils.L;
 import com.wuxinaedu.weixin.widget.MyRadioButton;
 
@@ -40,6 +43,7 @@ public class MainActivity extends BaseActivity {
 	private PopupWindow pop;
 	private Fragment[] fragments;
 	private ViewPager viewPager;
+	private UserInfor userBasicInfor;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -247,5 +251,18 @@ public class MainActivity extends BaseActivity {
 			return fragments.length;
 		}
 
+	}
+	
+	/**
+	 * 获得登录用户的基本信息
+	 * @return
+	 */
+	public UserInfor getUserInfo(){
+		//获取登录或注册成功保存的用户数据
+		if(userBasicInfor == null){
+			userBasicInfor = (UserInfor) FileLocalCache.getSerializableData(this,Constant.USER_INFOR);
+//			userBasicInfor= (UserInfor) FileLocalCache.getSerializableData(this, Constant.USER_INFOR);
+		}
+		return userBasicInfor;
 	}
 }
