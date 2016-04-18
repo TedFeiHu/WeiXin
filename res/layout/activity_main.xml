@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <include layout="@layout/activity_base"/>
+    <include android:id="@+id/title_id" layout="@layout/activity_base"/>
     
     
    <RadioGroup android:id="@+id/rg_id" android:layout_width="match_parent"

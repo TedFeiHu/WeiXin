@@ -3,16 +3,16 @@ package com.wuxinaedu.weixin.activity.core;
 import com.wuxinaedu.weixin.R;
 import com.wuxinaedu.weixin.utils.CoreUtil;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public abstract class BaseActivity extends Activity{
+public abstract class BaseActivity extends FragmentActivity{
 	//加载对话框
 	protected ProgressDialog pd;
 	protected ImageView leftIv,rightIv;
