@@ -17,7 +17,6 @@ import com.wuxinaedu.weixin.utils.FileLocalCache;
 import com.wuxinaedu.weixin.utils.L;
 import com.wuxinaedu.weixin.widget.MyRadioButton;
 
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -200,7 +199,7 @@ public class MainActivity extends BaseActivity {
 			});
 
 			pop = new PopupWindow(view, 480, ViewGroup.LayoutParams.WRAP_CONTENT, true);
-			pop.setBackgroundDrawable(new BitmapDrawable());
+//			pop.setBackgroundDrawable(new BitmapDrawable());
 			// 设置动画
 			pop.setAnimationStyle(R.style.popwin_anim_style);
 		}

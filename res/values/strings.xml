@@ -34,5 +34,12 @@
     <string name="ge">通用</string>
     <string name="about">关于微信</string>
     <string name="logout">退出登录</string>
+    <string name="friends">朋友圈</string>
+    <string name="sweep">扫一扫</string>
+    <string name="shake">摇一摇</string>
+    <string name="nearby">附近的人</string>
+    <string name="drift">漂流瓶</string>
+    <string name="shopping">购物</string>
+    <string name="game">游戏</string>
 
 </resources>
