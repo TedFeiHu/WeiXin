@@ -119,6 +119,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			dismissProDialog();
 			//登录
 			logon(result);
+			CoreUtil.finishActivityList();
 		}
 	}
 	

@@ -6,12 +6,16 @@ import java.util.List;
 
 import com.wuxinaedu.weixin.activity.core.BaseActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 public class CoreUtil {
 	
 	private static List<BaseActivity> list = new ArrayList<>();
+	private static float sDensity;
 
 	/**
 	 * 启动activity
@@ -45,7 +49,7 @@ public class CoreUtil {
 	
 	/**
 	 * 关闭activity集合
-	 *//*
+	 */
 	public static void finishActivityList(){
 		L.e("activity集合大小-----》》"+list.size());
 		for (int i = 0; i < list.size(); i++) {
@@ -53,7 +57,7 @@ public class CoreUtil {
 			list.get(i).finish();
 		}
 		list.clear();
-	}*/
+	}
 	
 	/**
 	 * 退出出程序
@@ -84,4 +88,46 @@ public class CoreUtil {
 			return false;
 		}
 	}
+	
+	/**
+	 * 将sp值转换为px值，保证文字大小不变
+	 * @param context
+	 * @param spValue
+	 * @return
+	 */
+	public static int spToPixel(Context context, float spValue) {
+		final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+		return (int) (spValue * fontScale + 0.5f);
+	}
+	
+	/**
+	 * dp转换为像素
+	 * @param context
+	 * @param nDip
+	 * @return
+	 */
+	public static int dipToPixel(Context context, int nDip) {
+		if (sDensity == 0) {
+			final WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+			DisplayMetrics dm = new DisplayMetrics();
+			wm.getDefaultDisplay().getMetrics(dm);
+			sDensity = dm.density;
+		}
+		return (int) (sDensity * nDip);
+	}
+	
+	/**
+	 * 获取屏幕 宽 高
+	 * @param activity
+	 * @return 数组  0 为宽度 1 为高度
+	 */
+	public static int[] getDisplay(Activity activity){
+		int[] display = new int[2];
+		DisplayMetrics dm = new DisplayMetrics();
+		activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+		display[0] = dm.widthPixels;
+		display[1] = dm.heightPixels;
+		return display;
+	}
+	
 }

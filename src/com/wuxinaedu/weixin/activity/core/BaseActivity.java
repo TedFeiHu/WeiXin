@@ -14,10 +14,10 @@ import android.widget.Toast;
 
 public abstract class BaseActivity extends Activity{
 	//加载对话框
-	private ProgressDialog pd;
-	private ImageView leftIv,rightIv;
-	private TextView title, rightTv;
-	private OnClickListener onClickListener;
+	protected ProgressDialog pd;
+	protected ImageView leftIv,rightIv;
+	protected TextView title, rightTv;
+	protected OnClickListener onClickListener;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +97,13 @@ public abstract class BaseActivity extends Activity{
 		rightTv.setText(resid);
 		rightTv.setOnClickListener(onClickListener);
 	}
+	
+	/**
+     * 设置隐藏右侧按钮
+     */
+    protected void hideRigehtImage(){
+    	rightIv.setVisibility(View.INVISIBLE);
+    }
 	
 	/**
 	 * 提示信息
