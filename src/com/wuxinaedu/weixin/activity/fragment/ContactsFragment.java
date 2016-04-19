@@ -10,6 +10,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.wuxinaedu.weixin.R;
+import com.wuxinaedu.weixin.activity.AddFriendsActivity;
+import com.wuxinaedu.weixin.activity.DetailsActivity;
 import com.wuxinaedu.weixin.activity.MainActivity;
 import com.wuxinaedu.weixin.activity.adapter.ContactsAdapter;
 import com.wuxinaedu.weixin.bean.Contacts;
@@ -187,17 +189,17 @@ public class ContactsFragment extends Fragment implements OnClickListener{
 		ClearEditText clearEdit = (ClearEditText) v.findViewById(R.id.ed_id);
 		clearEdit.addTextChangedListener(new MyTextWatcher(adapter,v));
 		
-//		//TODO 
-//		listView.setOnItemClickListener(new OnItemClickListener() {
-//
-//			@Override
-//			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//				Contacts contact = (Contacts) listView.getAdapter().getItem(position);
-//				Intent intent = new Intent(getActivity(), DetailsActivity.class);
-//				intent.putExtra(Constant.GET_SERIALIZABLE, contact);
-//				startActivity(intent);
-//			}
-//		});
+		//TODO 
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Contacts contact = (Contacts) listView.getAdapter().getItem(position);
+				Intent intent = new Intent(getActivity(), DetailsActivity.class);
+				intent.putExtra(Constant.GET_SERIALIZABLE, contact);
+				startActivity(intent);
+			}
+		});
 		
 		//将自定义的SideBar与 联系人列表的listview关联起来，实现联动  以及关联中间提示字母TextView
 		SideBar sideBar = (SideBar) view.findViewById(R.id.sb_id);
@@ -273,7 +275,22 @@ public class ContactsFragment extends Fragment implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
+		int id = v.getId();
+		switch (id) {
+		case R.id.new_friend_id:  // 跳转到添加朋友界面
+			startActivity(new Intent(getActivity(),AddFriendsActivity.class));
+			break;
+		case R.id.group_id:  //点击群聊
+//			Intent intent = new Intent(getActivity(),GroupActivity.class);
+//			startActivity(intent);
+			break;
+		case R.id.public_id:
+//			intent = new Intent(getActivity(),SubscribeActivity.class);
+//			startActivity(intent);
+			break;
+
+		default:
+			break;
+		}
 	}
 }

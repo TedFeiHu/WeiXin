@@ -44,7 +44,16 @@
     <string name="test">testtesttest</string>
     <string name="new_friend">新的朋友</string>
     <string name="group">群聊</string>
-        <string name="public_num">公众号</string>
-    
+    <string name="public_num">公众号</string>
+    <string name="area">地区</string>
+    <string name="autograph">个人签名</string>
+    <string name="my_photoes">个人相册</string>
+    <string name="send_message">发送消息</string>
+    <string name="addnewfriend">添加朋友</string>
+    <string name="search">搜索</string>
+    <string name="add_phone_con">添加手机联系人</string>
+    <string name="add_qq_fri">添加QQ好友</string>
+    <string name="receive">接受</string>
+    <string name="received">已接受</string>
 
 </resources>
