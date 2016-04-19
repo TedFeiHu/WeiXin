@@ -17,5 +17,7 @@
     
     <color name="logout_nom">#FC5050</color>
     <color name="logout_press">#D24141</color>
+    
+    <color name="friend_name">#4CC4F7</color>
 
 </resources>
