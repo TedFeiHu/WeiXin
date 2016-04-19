@@ -3,6 +3,8 @@ package com.wuxinaedu.weixin.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.wuxinaedu.weixin.activity.core.BaseActivity;
 
@@ -128,6 +130,35 @@ public class CoreUtil {
 		display[0] = dm.widthPixels;
 		display[1] = dm.heightPixels;
 		return display;
+	}
+	
+	/**
+	 * 判断是否为中文
+	 * @param str
+	 * @return
+	 */
+	public static boolean isChinese(String str){
+		Pattern p=Pattern.compile("^[\u4e00-\u9fa5]*$");
+		Matcher m=p.matcher(str);
+	    if(m.matches()){
+	    	return true;
+	    }else{
+	    	return false;
+	    }
+	}
+	
+	/**
+	 * 判断是否为字母
+	 * @param str
+	 * @return
+	 */
+	public static boolean isEnglish(String fstrData){   
+        char   c   =   fstrData.charAt(0);   
+        if(((c>='a'&&c<='z')   ||   (c>='A'&&c<='Z'))){   
+              return   true;   
+        }else{   
+              return   false;   
+        }   
 	}
 	
 }

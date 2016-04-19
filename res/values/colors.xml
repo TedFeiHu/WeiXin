@@ -19,5 +19,7 @@
     <color name="logout_press">#D24141</color>
     
     <color name="friend_name">#4CC4F7</color>
+    
+    <color name="black_70">#70000000</color>
 
 </resources>
