@@ -1,5 +1,6 @@
 package com.wuxinaedu.weixin.activity.adapter;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.xutils.x;
@@ -7,15 +8,20 @@ import org.xutils.common.Callback.CommonCallback;
 import org.xutils.image.ImageOptions;
 
 import com.wuxinaedu.weixin.R;
+import com.wuxinaedu.weixin.activity.ImageDetailActivity;
 import com.wuxinaedu.weixin.bean.FriendsCircle;
+import com.wuxinaedu.weixin.utils.Constant;
 import com.wuxinaedu.weixin.utils.DateUtil;
 import com.wuxinaedu.weixin.widget.GridViewForScroll;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -63,7 +69,7 @@ public class FriendsAdapter extends BaseAdapter {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 
-		FriendsCircle friends = list.get(position);
+		final FriendsCircle friends = list.get(position);
 		viewHolder.time.setText(DateUtil.getDay(friends.getTime()));
 		viewHolder.name.setText(friends.getName());
 		viewHolder.content.setText(friends.getContent());
@@ -92,17 +98,17 @@ public class FriendsAdapter extends BaseAdapter {
 		
 		//加载配图
 		viewHolder.gridView.setAdapter(new FriendsImageAdapter(context,friends.getImages()));
-//		viewHolder.gridView.setOnItemClickListener(new OnItemClickListener() {
-//
-//			@Override
-//			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//				Intent intent = new Intent(context,ImageDetailActivity.class);
-//				intent.putExtra(Constant.GET_SERIALIZABLE,(Serializable)friends.getImages());
-//				intent.putExtra(Constant.GET_POSITION, position);
-//				intent.putExtra(Constant.GET_ISFRIENDS,true);
-//				context.startActivity(intent);
-//			}
-//		});
+		viewHolder.gridView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent intent = new Intent(context,ImageDetailActivity.class);
+				intent.putExtra(Constant.GET_SERIALIZABLE,(Serializable)friends.getImages());
+				intent.putExtra(Constant.GET_POSITION, position);
+				intent.putExtra(Constant.GET_ISFRIENDS,true);
+				context.startActivity(intent);
+			}
+		});
 		return convertView;
 	}
 
