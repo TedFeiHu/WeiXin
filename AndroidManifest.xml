@@ -38,6 +38,7 @@
         <activity android:name="com.wuxinaedu.weixin.activity.ImageDetailActivity" />
         <activity android:name="com.wuxinaedu.weixin.activity.DetailsActivity" />
         <activity android:name="com.wuxinaedu.weixin.activity.AddFriendsActivity" />
+        <activity android:name="com.wuxinaedu.weixin.activity.GroupActivity" />
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import com.wuxinaedu.weixin.R;
 import com.wuxinaedu.weixin.activity.AddFriendsActivity;
 import com.wuxinaedu.weixin.activity.DetailsActivity;
+import com.wuxinaedu.weixin.activity.GroupActivity;
 import com.wuxinaedu.weixin.activity.MainActivity;
 import com.wuxinaedu.weixin.activity.adapter.ContactsAdapter;
 import com.wuxinaedu.weixin.bean.Contacts;
@@ -281,8 +282,8 @@ public class ContactsFragment extends Fragment implements OnClickListener{
 			startActivity(new Intent(getActivity(),AddFriendsActivity.class));
 			break;
 		case R.id.group_id:  //点击群聊
-//			Intent intent = new Intent(getActivity(),GroupActivity.class);
-//			startActivity(intent);
+			Intent intent = new Intent(getActivity(),GroupActivity.class);
+			startActivity(intent);
 			break;
 		case R.id.public_id:
 //			intent = new Intent(getActivity(),SubscribeActivity.class);

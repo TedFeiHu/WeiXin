@@ -55,5 +55,6 @@
     <string name="add_qq_fri">添加QQ好友</string>
     <string name="receive">接受</string>
     <string name="received">已接受</string>
+    <string name="queding">确定</string>
 
 </resources>

@@ -99,6 +99,11 @@ public abstract class BaseActivity extends FragmentActivity{
 		rightTv.setText(resid);
 		rightTv.setOnClickListener(onClickListener);
 	}
+	protected void 	showRightTv(String str, OnClickListener onClickListener){
+		rightTv.setVisibility(View.VISIBLE);
+		rightTv.setText(str);
+		rightTv.setOnClickListener(onClickListener);
+	}
 	
 	/**
      * 设置隐藏右侧按钮
