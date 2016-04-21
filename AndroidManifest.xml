@@ -39,6 +39,7 @@
         <activity android:name="com.wuxinaedu.weixin.activity.DetailsActivity" />
         <activity android:name="com.wuxinaedu.weixin.activity.AddFriendsActivity" />
         <activity android:name="com.wuxinaedu.weixin.activity.GroupActivity" />
+        <activity android:name="com.wuxinaedu.weixin.activity.ChatActivity" />
     </application>
 
 </manifest>
