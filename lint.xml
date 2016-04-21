@@ -9,6 +9,8 @@
         <ignore path="src/com/wuxinaedu/weixin/activity/adapter/FriendsAdapter.java" />
         <ignore path="src/com/wuxinaedu/weixin/activity/adapter/FriendsImageAdapter.java" />
         <ignore path="src/com/wuxinaedu/weixin/activity/adapter/GroupHeadAdapter.java" />
+        <ignore path="src/com/wuxinaedu/weixin/activity/adapter/SubscribeAdapter.java" />
+        <ignore path="src/com/wuxinaedu/weixin/activity/adapter/SubscribeDetailsAdapter.java" />
         <ignore path="src/com/wuxinaedu/weixin/activity/fragment/ContactsFragment.java" />
         <ignore path="src/com/wuxinaedu/weixin/activity/fragment/FindFragment.java" />
         <ignore path="src/com/wuxinaedu/weixin/activity/fragment/MeFragment.java" />

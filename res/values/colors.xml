@@ -21,5 +21,6 @@
     <color name="friend_name">#4CC4F7</color>
     
     <color name="black_70">#70000000</color>
+    <color name="black_30">#30000000</color>
 
 </resources>

@@ -14,6 +14,7 @@ import com.wuxinaedu.weixin.activity.AddFriendsActivity;
 import com.wuxinaedu.weixin.activity.DetailsActivity;
 import com.wuxinaedu.weixin.activity.GroupActivity;
 import com.wuxinaedu.weixin.activity.MainActivity;
+import com.wuxinaedu.weixin.activity.SubscribeActivity;
 import com.wuxinaedu.weixin.activity.adapter.ContactsAdapter;
 import com.wuxinaedu.weixin.bean.Contacts;
 import com.wuxinaedu.weixin.utils.Constant;
@@ -286,8 +287,8 @@ public class ContactsFragment extends Fragment implements OnClickListener{
 			startActivity(intent);
 			break;
 		case R.id.public_id:
-//			intent = new Intent(getActivity(),SubscribeActivity.class);
-//			startActivity(intent);
+			intent = new Intent(getActivity(),SubscribeActivity.class);
+			startActivity(intent);
 			break;
 
 		default:
