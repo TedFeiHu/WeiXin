@@ -58,5 +58,11 @@
     <string name="queding">确定</string>
     <string name="send">发送</string>
     <string name="send_voice">按住说话</string>
+    <string name="pics">图片</string>
+    <string name="camera">拍照</string>
+    <string name="location">位置</string>
+    <string name="file">文件</string>
+    <string name="voice_phone">语音通话</string>
+    <string name="video">视频通话</string>
 
 </resources>

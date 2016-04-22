@@ -25,4 +25,6 @@
     <color name="black_50">#50000000</color>
     <color name="black_90">#90000000</color>
 
+    
+    <color name="light_red">#CD0000</color>
 </resources>
